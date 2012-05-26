@@ -98,6 +98,10 @@ int main(int argc, char **argv) {
 
     VtePty *pty = vte_terminal_pty_new(VTE_TERMINAL(vte), 0, &error);
 
+    // Set cursor to not blink
+    VteTerminalCursorBlinkMode bl = VTE_CURSOR_BLINK_OFF;
+    vte_terminal_set_cursor_blink_mode(VTE_TERMINAL(vte), bl);
+
     if (!pty) {
         fprintf(stderr, "Failed to create pty: %s\n", error->message);
         return 1;
