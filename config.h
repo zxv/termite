@@ -9,17 +9,17 @@
 
 #ifdef CLICKABLE_URL
 static const char *url_regex = "(ftp|http)s?://[-a-zA-Z0-9.?$%&/=_~#.,:;+]*";
-static const char *url_command = "/usr/bin/firefox";
+static const char *url_command = "/usr/bin/firefox-nightly";
 #endif
 
 // 0.0: opaque, 1.0: transparent
 //#define TRANSPARENCY 0.2
 
-static const char *font = "Monospace 9";
-static const long scrollback_lines = 1000;
+static const char *font = "Consolas 10";
+static const long scrollback_lines = 1500;
 
-static const char *foreground_color = "#dcdccc";
-static const char *background_color = "#3f3f3f";
+static const char *foreground_color = "#898989";
+static const char *background_color = "#1c1c1c";
 
 static const char *colors[16] = {
     "#3f3f3f", // black
